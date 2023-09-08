@@ -28,6 +28,27 @@
             background-color: #fff;
             top: 50%;
         }
+        .btn--dld {
+            position: absolute;
+            top: 202px;
+            right: 16px;
+            width: 76px;
+            height: 112px;
+        }
+        .btn--autoClub {
+            position: absolute;
+            top: 372px;
+            left: 16px;
+            width: 160px;
+            height: 88px;
+        }
+        .btn--autoStation {
+            position: absolute;
+            top: 372px;
+            right: 16px;
+            width: 160px;
+            height: 88px;
+        }
     </style>
 </head>
 <body>
@@ -35,8 +56,12 @@
     <div class="container">
         <div id="dld"><iframe style="border: 0" width="550" height="1000" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FsEdiQ38P5cwi86CEDztuv8%2FDigital-Lending%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D25-16146%26viewport%3D3307%252C325%252C0.89%26t%3DSoQLBqJwgadYPPIW-1%26scaling%3Dscale-down%26starting-point-node-id%3D25%253A15860%26mode%3Ddesign" allowfullscreen></iframe></div>
         <div id="autoClub"><iframe style="border: 0;" width="550" height="1000" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5Kmkqx8KdpwTxCBXwsvwPW%2FAUTO-CLUB%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D4-7898%26viewport%3D1711%252C1475%252C0.45%26t%3D1bPno6K4EOKN8gQC-1%26scaling%3Dscale-down%26starting-point-node-id%3D39%253A2363%26mode%3Ddesign" allowfullscreen></iframe></div>
-        <!-- <div id="home"><a href="javascript:zidx('dld')">DLD</a><br><a href="javascript:zidx('autoClub')">Auto Club</a></div> -->
+        <div id="autoStation"><iframe style="border: 0" width="550" height="1000" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FSjmtZENbfh1BnYbiCZRcb7%2FGO-Auto-Station%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D6-131844%26viewport%3D26282%252C11849%252C0.58%26t%3D9gGJ92EITHRrABdy-1%26scaling%3Dscale-down%26starting-point-node-id%3D6%253A131844%26mode%3Ddesign" allowfullscreen></iframe></iframe></div>
+        <!-- <div id="home"><br><a href="javascript:zidx('autoClub')">Auto Club</a></div> -->
         <div id="home">
+            <a href="javascript:zidx('dld')" class="btn--dld"></a>
+            <a href="javascript:zidx('autoClub')" class="btn--autoClub"></a>
+            <a href="javascript:zidx('autoStation')" class="btn--autoStation"></a>
             <img src="home.png" alt="" style="float: left;">
         </div>
     </div>
@@ -45,12 +70,19 @@
             if(val == "home") {
                 document.querySelector('#dld').classList.remove('active')
                 document.querySelector('#autoClub').classList.remove('active')
+                document.querySelector('#autoStation').classList.remove('active')
             } else if(val == "dld") {
                 document.querySelector('#dld').classList.add('active')
                 document.querySelector('#autoClub').classList.remove('active')
+                document.querySelector('#autoStation').classList.remove('active')
             } else if(val == "autoClub") {
                 document.querySelector('#dld').classList.remove('active')
                 document.querySelector('#autoClub').classList.add('active')
+                document.querySelector('#autoStation').classList.remove('active')
+            } else if(val == "autoStation") {
+                document.querySelector('#dld').classList.remove('active')
+                document.querySelector('#autoClub').classList.remove('active')
+                document.querySelector('#autoStation').classList.add('active')
             }
         }
     </script>
